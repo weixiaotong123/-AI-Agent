@@ -1,0 +1,61 @@
+services:
+  # Redis 缓存（可选）
+  redis:
+    image: redis:7-alpine
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    restart: unless-stopped
+
+  # 高德 MCP 工具服务，仅在 Docker 网络内访问
+  amap-mcp:
+    build: ./backend
+    command: ["python", "-m", "app.mcp.amap_server"]
+    env_file:
+      - ./backend/.env
+    environment:
+      AMAP_MCP_HOST: 0.0.0.0
+      AMAP_MCP_PORT: 8001
+    expose:
+      - "8001"
+    healthcheck:
+      test: ["CMD", "python", "-c", "import socket; socket.create_connection(('127.0.0.1', 8001), timeout=2).close()"]
+      interval: 5s
+      timeout: 3s
+      retries: 12
+    restart: unless-stopped
+
+  # 后端 FastAPI
+  backend:
+    build: ./backend
+    ports:
+      - "8000:8000"
+    env_file:
+      - ./backend/.env
+    environment:
+      REDIS_ENABLED: "true"
+      REDIS_URL: redis://redis:6379/0
+      AMAP_MCP_ENABLED: "true"
+      AMAP_MCP_URL: http://amap-mcp:8001/mcp
+    volumes:
+      - backend_db:/app/db
+    depends_on:
+      redis:
+        condition: service_started
+      amap-mcp:
+        condition: service_healthy
+    restart: unless-stopped
+
+  # 前端 Vue + Nginx
+  frontend:
+    build: ./frontend
+    ports:
+      - "80:80"
+    depends_on:
+      - backend
+    restart: unless-stopped
+
+volumes:
+  redis_data:
+  backend_db:

@@ -1,0 +1,112 @@
+[
+  {
+    "id": "dali_economy_to_luxury",
+    "destination": "大理",
+    "other_destination": "厦门",
+    "global_instruction": "以后旅行我优先选择经济型酒店。",
+    "global_value_terms": ["经济"],
+    "destination_instruction": "去大理时我希望住在古城附近。",
+    "destination_value_terms": ["古城"],
+    "current_hotel_level": "高端型",
+    "expected_hotel_section": "高端型"
+  },
+  {
+    "id": "chengdu_luxury_to_economy",
+    "destination": "成都",
+    "other_destination": "西安",
+    "global_instruction": "以后出门旅行我喜欢高端型酒店。",
+    "global_value_terms": ["高端"],
+    "destination_instruction": "去成都时我更想住在宽窄巷子附近。",
+    "destination_value_terms": ["宽窄巷子"],
+    "current_hotel_level": "经济型",
+    "expected_hotel_section": "经济型"
+  },
+  {
+    "id": "xian_comfort_to_luxury",
+    "destination": "西安",
+    "other_destination": "北京",
+    "global_instruction": "我平时住舒适型酒店比较合适，请以后记住。",
+    "global_value_terms": ["舒适"],
+    "destination_instruction": "去西安时我偏好住在钟楼附近。",
+    "destination_value_terms": ["钟楼"],
+    "current_hotel_level": "高端型",
+    "expected_hotel_section": "高端型"
+  },
+  {
+    "id": "xiamen_economy_to_comfort",
+    "destination": "厦门",
+    "other_destination": "三亚",
+    "global_instruction": "长期来说我更喜欢经济型住宿。",
+    "global_value_terms": ["经济"],
+    "destination_instruction": "去厦门时希望住在鼓浪屿附近。",
+    "destination_value_terms": ["鼓浪屿"],
+    "current_hotel_level": "舒适型",
+    "expected_hotel_section": "舒适型"
+  },
+  {
+    "id": "sanya_comfort_to_economy",
+    "destination": "三亚",
+    "other_destination": "大理",
+    "global_instruction": "以后旅行请优先给我安排舒适型酒店。",
+    "global_value_terms": ["舒适"],
+    "destination_instruction": "在三亚期间我喜欢住在三亚湾附近。",
+    "destination_value_terms": ["三亚湾"],
+    "current_hotel_level": "经济型",
+    "expected_hotel_section": "经济型"
+  },
+  {
+    "id": "beijing_luxury_to_comfort",
+    "destination": "北京",
+    "other_destination": "成都",
+    "global_instruction": "我通常希望住高端型酒店。",
+    "global_value_terms": ["高端"],
+    "destination_instruction": "到北京时我更喜欢住在故宫周边。",
+    "destination_value_terms": ["故宫"],
+    "current_hotel_level": "舒适型",
+    "expected_hotel_section": "舒适型"
+  },
+  {
+    "id": "dali_comfort_to_economy",
+    "destination": "大理",
+    "other_destination": "西安",
+    "global_instruction": "我的长期住宿偏好是舒适型酒店。",
+    "global_value_terms": ["舒适"],
+    "destination_instruction": "去大理期间我偏好住在洱海附近。",
+    "destination_value_terms": ["洱海"],
+    "current_hotel_level": "经济型",
+    "expected_hotel_section": "经济型"
+  },
+  {
+    "id": "chengdu_economy_to_luxury",
+    "destination": "成都",
+    "other_destination": "厦门",
+    "global_instruction": "以后旅行都优先选经济型酒店。",
+    "global_value_terms": ["经济"],
+    "destination_instruction": "去成都期间我更想住在市中心附近。",
+    "destination_value_terms": ["市中心"],
+    "current_hotel_level": "高端型",
+    "expected_hotel_section": "高端型"
+  },
+  {
+    "id": "xian_economy_to_comfort",
+    "destination": "西安",
+    "other_destination": "三亚",
+    "global_instruction": "我一向喜欢经济实惠的酒店，请记住这个习惯。",
+    "global_value_terms": ["经济"],
+    "destination_instruction": "去西安时住在回民街附近会更方便。",
+    "destination_value_terms": ["回民街"],
+    "current_hotel_level": "舒适型",
+    "expected_hotel_section": "舒适型"
+  },
+  {
+    "id": "xiamen_luxury_to_economy",
+    "destination": "厦门",
+    "other_destination": "北京",
+    "global_instruction": "我长期偏好高端型住宿。",
+    "global_value_terms": ["高端"],
+    "destination_instruction": "在厦门旅行时我喜欢住在环岛路附近。",
+    "destination_value_terms": ["环岛路"],
+    "current_hotel_level": "经济型",
+    "expected_hotel_section": "经济型"
+  }
+]

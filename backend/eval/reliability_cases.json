@@ -1,0 +1,98 @@
+{
+  "memory": [
+    {
+      "id": "global_shellfish_allergy",
+      "instruction": "我对海鲜过敏，以后旅行都不要安排海鲜餐食。",
+      "destination": "大理",
+      "category": "constraint",
+      "scope": "global",
+      "value_terms": ["海鲜"]
+    },
+    {
+      "id": "global_slow_pace",
+      "instruction": "以后旅行我都喜欢慢节奏，不要安排得太赶。",
+      "destination": "成都",
+      "category": "preference",
+      "scope": "global",
+      "value_terms": ["慢", "轻松"]
+    },
+    {
+      "id": "global_budget_hotel",
+      "instruction": "以后出行优先帮我找经济型酒店。",
+      "destination": "厦门",
+      "category": "preference",
+      "scope": "global",
+      "value_terms": ["经济"]
+    },
+    {
+      "id": "destination_dali_hotel_area",
+      "instruction": "去大理时我更喜欢住在古城附近。",
+      "destination": "大理",
+      "category": "preference",
+      "scope": "destination",
+      "value_terms": ["古城"]
+    },
+    {
+      "id": "global_mild_food",
+      "instruction": "我长期饮食偏好是清淡少辣，请以后都记住。",
+      "destination": "西安",
+      "category": "preference",
+      "scope": "global",
+      "value_terms": ["清淡", "少辣", "不吃辣"]
+    }
+  ],
+  "constraints": [
+    {
+      "id": "avoid_peanuts",
+      "constraint": "花生过敏",
+      "dietary_preferences": ["花生过敏"],
+      "prohibited_terms": ["花生油", "花生酱", "花生粉", "花生"]
+    },
+    {
+      "id": "avoid_shellfish",
+      "constraint": "海鲜过敏",
+      "dietary_preferences": ["海鲜过敏"],
+      "prohibited_terms": ["海鲜", "虾", "蟹", "贝类", "鱼"]
+    },
+    {
+      "id": "no_spicy_food",
+      "constraint": "不吃辣",
+      "dietary_preferences": ["不吃辣"],
+      "prohibited_terms": ["麻辣", "香辣", "酸辣", "辣椒", "辣味"]
+    },
+    {
+      "id": "vegetarian",
+      "constraint": "严格素食，不含肉类",
+      "dietary_preferences": ["严格素食"],
+      "prohibited_terms": ["牛肉", "羊肉", "猪肉", "鸡肉", "肉类"]
+    },
+    {
+      "id": "no_alcohol",
+      "constraint": "宗教原因不饮酒",
+      "dietary_preferences": ["不饮酒"],
+      "prohibited_terms": ["白酒", "啤酒", "料酒", "饮酒"]
+    }
+  ],
+  "replanning": [
+    {
+      "id": "relax_day_two",
+      "instruction": "第二天改得轻松一点，下午再出发，不要安排太满。"
+    },
+    {
+      "id": "indoor_day_two",
+      "instruction": "把第二天改成室内文化体验，避免户外暴晒。"
+    },
+    {
+      "id": "slow_day_two",
+      "instruction": "第二天只安排一个主要活动，留出更多自由时间。"
+    },
+    {
+      "id": "later_start_day_two",
+      "instruction": "第二天不要早起，行程从中午以后开始。"
+    },
+    {
+      "id": "food_change_day_two",
+      "instruction": "第二天餐饮安排改清淡少辣，行程节奏保持轻松。"
+    }
+  ]
+}
